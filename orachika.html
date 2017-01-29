@@ -33,12 +33,14 @@
                     <option value="Investment Planning">30km地点</option>
                     <option value="Some or all of the above">35km地点</option>
                 </select>
-                <!-- <div id="sbHolder_65133656" class="sbHolder"><a id="sbToggle_65133656" href="#" class="sbToggle"></a><a id="sbSelector_65133656" href="#" class="sbSelector">Please Select</a><ul id="sbOptions_65133656" class="sbOptions" style="display: none;"><li><a href="#General Enquiry" rel="General Enquiry">Please Select</a></li><li><a href="#Pension" rel="Pension">Pension</a></li><li><a href="#Retirement Management" rel="Retirement Management">Retirement Management</a></li><li><a href="#Investment Planning" rel="Investment Planning">Investment Planning</a></li><li><a href="#Some or all of the above" rel="Some or all of the above">Some or all of the above</a></li></ul></div> -->
                 <input type="hidden" name="invisibleinput" value="">
             </div>
             <div class="row">
                 <label>メッセージを録音</label>
-                <input class="required email" type="text" value="" name="email">
+                <ul class="message">
+                  <li id="id_start_button">録音開始</li>
+                  <li class="no-message">メッセージがありません</li>
+                </ul>
             </div>
             <div class="row" style="text-align: center; height: 40px; padding-top: 25px;">
                 <a href="orachika1.html" class="push_button js-on contact_submit">
@@ -55,5 +57,20 @@
     <script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="./jquery.selectbox-0.1.3.min.js"></script>
     <script type="text/javascript" src="./contact.js"></script>
+    <script type="text/javascript" src="./speech_input.js"></script>
+    <script>
+    speech_input = new SpeechInputWs( null );
+    // 録音開始ボタンの動作
+    $("#id_start_button").click(function(){
+        var dfd = speech_input.start();
+        dfd.done( function( text ){
+            $("#id_output").val( text );
+        });
+        $(".no-message").text("メッセージ登録完了");
+    });
+    </script>
+    <script>
+    // 録音中止ボタン押下
+    </script>
   </body>
 </html>

@@ -41,6 +41,10 @@ input[type=text], input[type=password], textarea {
     font-family: OpenSansRegular, Arial, Helvetica, sans-serif;
     padding: 5px;
 }
+audio {
+	width: 70%;
+  margin-top: 5px;
+}
 .wrapper {
     margin: 30px;
 }
@@ -72,6 +76,7 @@ input[type=text], input[type=password], textarea {
     display: block;
     font-size: 12px;
     margin: 0 0 5px;
+		font-weight: bold;
 }
 .contact_wrapper label.confirm {
     font-size: 24px;
@@ -106,4 +111,51 @@ input[type=text], input[type=password], textarea {
 .contact_wrapper .left .row .push_button {
     position: relative;
     top: 5px;
+}
+ul.message li#id_start_button{
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 2px 15px;
+	margin-right: 10px;
+	border: solid 1px #9A9995;
+}
+ul.message {
+	margin: 0;
+	padding: 0;
+}
+ul.message li {
+	display: inline-block;
+}
+ul.message li.no-message {
+	font-size: 9px;
+  vertical-align: middle;
+}
+ul.message li.done-message {
+	font-size: 9px;
+  vertical-align: middle;
+	display: none;
+}
+#_id_overlay_notice {
+	background-color: rgba(0,0,0,.8);
+}
+#_id_overlay_notice form {
+  position: absolute;
+  left: 35%;
+  top: 46%;
+	color: #fff;
+	text-align: center;
+}
+#_id_overlay_notice form input {
+	text-shadow: 1px 1px 0 #DB7675, 2px 2px 0 #747370;
+	background-color: #DB7675;
+	color: #fff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	-moz-transition: all .25s ease-in-out 0;
+	-webkit-transition: all .25s ease-in-out 0;
+	-o-transition: all .25s ease-in-out 0;
+	-khtml-transition: all .25s ease-in-out 0;
+	padding: 4px 20px;
 }
