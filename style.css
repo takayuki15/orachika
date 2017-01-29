@@ -120,7 +120,7 @@ ul.message li#id_start_button{
 	border: solid 1px #9A9995;
 }
 ul.message {
-	margin: 0;
+	margin: 15px 0 0;
 	padding: 0;
 }
 ul.message li {
