@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+  <title>オラちか</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <link rel="stylesheet" href="./jquery.selectbox.css" type="text/css" />
+  <link rel="stylesheet" href="./remodal.css">
+<link rel="stylesheet" href="./remodal-default-theme.css">
+</head>
+  <body>
+    <div id="input" class="wrapper">
+      <header>
+        <div id="logo">
+          <img src="./logo.gif" alt="logo" />
+        </div>
+      </header>
+      <div class="middle">
+        <div class="contact_wrapper" style="padding-bottom: 60px;">
+          <h1> ランナーたちに<br />応援メッセージを送ろう！ </h1>
+          <form id="ContactForm" method="post" action="/contact/contactform" novalidate="novalidate">
+            <input type="hidden" name="action" value="ContactForm">
+            <div class="row">
+                <label>ゼッケン番号</label>
+                <label class="confirm">No.24</label>
+            </div>
+            <div class="row" style="z-index: 5;">
+                <label>メッセージを聞いて欲しい地点</label>
+                <label class="confirm">10km地点</label>
+                <input type="hidden" name="invisibleinput" value="">
+            </div>
+            <div class="row">
+                <label>メッセージを再生</label>
+                <input class="required email" type="text" value="" name="email">
+            </div>
+            <div class="row" style="text-align: center; height: 40px; padding-top: 25px;">
+                <a href="#modal" class="push_button js-on contact_submit">送信 </a><br /><br />
+                <a href="orachika.html" class="back js-on contact_submit">戻る </a>
+                <input type="submit" value="Send Message" class="submit" style="display:none;">
+            </div>
+          </form>
+          <div class="thankyou"> </div>
+        </div>
+      </div>
+      <footer>
+      </footer>
+    </div>
+    <script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./jquery.selectbox-0.1.3.min.js"></script>
+    <script type="text/javascript" src="./contact.js"></script>
+    <script src="./remodal.min.js"></script>
+    <div class="remodal" data-remodal-id="modal">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <h1>メッセージ送信完了</h1>
+      <p></p>
+      <!-- <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button> -->
+      <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+    </div>
+  </body>
+</html>

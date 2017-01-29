@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes">
+  <title>オラちか</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" />
+  <link rel="stylesheet" href="./jquery.selectbox.css" type="text/css" />
+</head>
+  <body>
+    <div id="input" class="wrapper">
+      <header>
+        <div id="logo">
+          <img src="./logo.gif" alt="logo" />
+        </div>
+      </header>
+      <div class="middle">
+        <div class="contact_wrapper">
+          <h1> ランナーたちに<br />応援メッセージを送ろう！ </h1>
+          <form id="ContactForm" method="post" action="/contact/contactform" novalidate="novalidate">
+            <input type="hidden" name="action" value="ContactForm">
+            <div class="row">
+                <label>ゼッケン番号</label>
+                <input class="required" type="text" value="" name="name">
+            </div>
+            <div class="row" style="z-index: 5;">
+                <label>
+                    メッセージを聞いて欲しい地点</label>
+                <select name="intrestedIn" id="intrestedIn" sb="65133656" style="display: none;">
+                    <option value="General Enquiry">距離を選択してください</option>
+                    <option value="Pension">10km地点</option>
+                    <option value="Retirement Management">20km地点</option>
+                    <option value="Investment Planning">30km地点</option>
+                    <option value="Some or all of the above">35km地点</option>
+                </select>
+                <!-- <div id="sbHolder_65133656" class="sbHolder"><a id="sbToggle_65133656" href="#" class="sbToggle"></a><a id="sbSelector_65133656" href="#" class="sbSelector">Please Select</a><ul id="sbOptions_65133656" class="sbOptions" style="display: none;"><li><a href="#General Enquiry" rel="General Enquiry">Please Select</a></li><li><a href="#Pension" rel="Pension">Pension</a></li><li><a href="#Retirement Management" rel="Retirement Management">Retirement Management</a></li><li><a href="#Investment Planning" rel="Investment Planning">Investment Planning</a></li><li><a href="#Some or all of the above" rel="Some or all of the above">Some or all of the above</a></li></ul></div> -->
+                <input type="hidden" name="invisibleinput" value="">
+            </div>
+            <div class="row">
+                <label>メッセージを録音</label>
+                <input class="required email" type="text" value="" name="email">
+            </div>
+            <div class="row" style="text-align: center; height: 40px; padding-top: 25px;">
+                <a href="orachika1.html" class="push_button js-on contact_submit">
+                    確認 </a>
+                <input type="submit" value="Send Message" class="submit" style="display:none;">
+            </div>
+          </form>
+          <div class="thankyou"> </div>
+        </div>
+      </div>
+      <footer>
+      </footer>
+    </div>
+    <script type="text/javascript" src="./jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="./jquery.selectbox-0.1.3.min.js"></script>
+    <script type="text/javascript" src="./contact.js"></script>
+  </body>
+</html>
