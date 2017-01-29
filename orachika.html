@@ -38,8 +38,8 @@
             <div class="row">
                 <label>メッセージを録音</label>
                 <ul class="message">
-                  <a href="https://kimizuka.github.io/google-api/SpeechRecognition/" id="id_start_button">録音開始</a>
-                  <!-- <li id="id_start_button">録音開始</li> -->
+                  <!-- <a href="https://kimizuka.github.io/google-api/SpeechRecognition/" id="id_start_button">録音開始</a> -->
+                  <li id="id_start_button">録音開始</li>
                   <li class="no-message">メッセージがありません</li>
                 </ul>
             </div>
@@ -63,12 +63,20 @@
     speech_input = new SpeechInputWs( null );
     // 録音開始ボタンの動作
     $("#id_start_button").click(function(){
+        $("#_id_overlay_notice").css('display', 'block');
         var dfd = speech_input.start();
         dfd.done( function( text ){
             $("#id_output").val( text );
         });
         $(".no-message").text("メッセージ登録完了");
     });
+    $("input#suspend").click(function(){
+        $("#_id_overlay_notice").css('display', 'none');
+    });
     </script>
+    <!-- <div id="_id_overlay_notice" style="width: 100%; height: 100%; text-align: left; position: fixed; top: 0px; left: 0px; z-index: 100; display: none;">　<form>音声入力中・・・ &nbsp; <br><br>
+      <input id="suspend" type="button" value="中止">
+      <div id="suspend">中止</div>
+      <br></form></div> -->
   </body>
 </html>
